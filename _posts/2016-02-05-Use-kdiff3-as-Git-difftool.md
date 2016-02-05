@@ -4,15 +4,13 @@ title: Use kdiff3 as Git diff tool
 categories: git cheatsheet blog
 ---
 
-# Use kdiff3 as the diff tool 
-
-Git's difftool can be customized.  I prefer to use kdiff3 (which also runs on Windows), because it can do 3 way file comparison.
+Git's difftool can be customized.  My favorite program is kdiff3 (which also runs on Windows), because it can do 3 way file comparison and is very useful during code merge.  Here are the steps to install and customize it for Git (on Ubuntu).
 
 ## 1. Install kdiff3
 
 {% highlight bash %}
 sudo apt-get install kdiff3
-{% endhighlighter %}
+{% endhighlight %}
 
 ## 2. Change font for kdiff3
 
@@ -20,12 +18,12 @@ kdiff3 on Ubuntu has a bug that user cannot save preferencei from the GUI.  The 
 
 {% highlight bash %}
  vi ~/.kde/share/config/kdiff3rc
-{% endhighlighter %}
+{% endhighlight %}
 
 The find the line "Font" and replace with 'Ubuntu Mono', like this:
 {% highlight text %}
 Font=Ubuntu Mono,9,-1,5,50,0,0,0,0,0
-{% endhighlighter %}
+{% endhighlight %}
 
 It should fix the font overlapping issue.
 
